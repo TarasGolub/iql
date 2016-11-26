@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#">
+    <input type="text" id="input">
+    <button>CLICK HERE!</button>
+</form>
+<div>Result: <span></span></div>
+
+<script>
+    var input = document.getElementsByTagName('input')[0];
+    var button = document.getElementsByTagName('button')[0];
+    var span = document.getElementsByTagName('span')[0];
+
+    button.onclick = function () {
+        span.innerHTML = toSquare(input.value);
+    };
+</script>
+
+<script src="task5_toSquare.js"></script>
+</body>
+</html>

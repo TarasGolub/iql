@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 8 | Student 3</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="index.html" class="main_link">Regular Expressions in javascript</a></h1>
+        <p>Lecture 8</p>
+    </header>
+    <main>
+        <div class="page_wrap">
+            <div class="task task1">
+                <h2>Task 1</h2>
+                <div class="desc">
+                    <p>
+                      Дана строка, содержащая номер кредитной карточки. <br>
+                      Длина строки может быть произвольной, но больше 8 символов.<br>
+                      Нужно оставить первые 3 и последние 4 символа, а остальные заменить звездочками.<br>
+                      Результирующая строка должна быть той же длины, что и исходная.<br>
+                      Например, <code>"DE56986623670976937041"</code><br>
+                      должно превратиться в <code>""DE5***************7041"</code><br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task1_1">Введите номер кредитной карточки: </label>
+                    <input type="text" id="inp_task1_1" class="input">
+                    <button type="submit" id="btn_task1" >GO</button>
+                    <button type="reset" id="btn_reset_task1" >RESET</button>
+
+                </form>
+                <div class="result" id="res_task1">
+
+                </div>
+            </div>
+            <div class="task task2">
+                <h2>Task 15</h2>
+                <div class="desc">
+                    <p>
+                      Есть многострочный текст. Каждая строка является JS выражением.<br>
+                      Есть корректные выражения, которые могут быть вычислены. Есть выражения с ошибками.<br>
+                      <code>var text =<br>
+                      "3+2\n" +<br>
+                      "33-11*2\n" +<br>
+                      "Math.sqrt(4)+1\n" +<br>
+                      "33 aaa 44 bbb\n" +<br>
+                      "6 / 2";</code><br>
+                      Нужно заменить в этом многострочном тексте каждую строку ее <code>вычисленным значением</code> или словом <code>ERROR”</code>,<br>
+                      если интерпретатор JS не может его вычислить.<br>
+                    </p>
+                </div>
+                  <form action="javascript:;">
+                    <label for="inp_task2_1">Строка с выражением: </label>
+                    <textarea id="inp_task2_1" class="input"></textarea>
+                    <button type="submit" id="btn_task2" >GO</button>
+                    <button type="reset" id="btn_reset_task2" >RESET</button>
+
+                </form>
+                <div class="result" id="res_task2">
+
+                </div>
+            </div>
+            <div class="task task3">
+                <h2>Task 14</h2>
+                <div class="desc">
+                    <p>
+                        Есть строка, в которой содержатся десятичные числа. <br>
+                        Нужно заменить все эти числа шестнадцатиричными.<br>
+                        Строка <code>"2233 + 1122 = 3355"</code> должна превратиться в <code>"0x8B9 + 0x462 = 0xD1B"</code><br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task3_1">Ваша строка: </label>
+                    <input type="text" id="inp_task3_1" class="input">
+                    <button type="submit" id="btn_task3" >GO</button>
+                    <button type="reset" id="btn_reset_task3" >RESET</button>
+
+                </form>
+                <div class="result" id="res_task3">
+
+                </div>
+            </div>
+            <div class="task task4">
+                <h2>Task 11</h2>
+                <div class="desc">
+                    <p>
+                        Написать регулярное выражение, которое позволит проверить,
+                        что строка произвольной длины содержит только 2 символа.<br>
+                        <code>"1111111111112221222111111111112" – OK</code><br>
+                        <code>"aaaaaaaaaabbabaabababaa" – OK</code><br>
+                        <code>"x" – NOT OK</code><br>
+                        <code>"" – NOT OK</code><br>
+                        <code>"12###########12" – NOT OK</code><br>
+                        <code>"XY" – OK</code><br>
+                        <code>"aaa aaa aaa" – OK</code><br>
+                        Строку можно писать в кавычках или без, кавички в начале и конце строки игнорируются. <br>
+                        Пробелы в конце строки так же игнорируются. <br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task4_1">Ваша строка: </label>
+                    <input type="text" id="inp_task4_1" class="input">
+                    <button type="submit" id="btn_task4" >GO</button>
+                    <button type="reset" id="btn_reset_task4" >RESET</button>
+
+                </form>
+                <div class="result" id="res_task4">
+
+                </div>
+            </div>
+            <div class="task task5">
+                <h2>Task 9</h2>
+                <div class="desc">
+                    <p>
+                        Есть матрица, записанная в виде строки. <br>
+                        Точка с запятой используется как разделитель строк матрицы,<br>
+                        а запятая – как разделитель элементов в строке. <br>
+                        <code>var matrix1 = "a,vb,c,d;1,2,3,4;444444444444,4,3,2";</code> <br>
+                        <code>var matrix2 = "a, vb, c, d  ;  1 ,2 ,3 ,4  ; 444444444444 , 4 , 3 , 2";</code> <br>
+                        <code>var matrix3 = "a,b,c;1,2,3;a1,b2,c3,d4";</code> <br>
+                        Нужно написать подпрограмму, которая проверит, что все строки матрицы содержат одинаковое количество элементов.<br>
+                        Количество строк и количество столбцов может быть любым натуральным числом.<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task5_1">Ваша матрица: </label>
+                    <input type="text" id="inp_task5_1" class="input">
+                    <button type="submit" id="btn_task5" >GO</button>
+                    <button type="reset" id="btn_reset_task5" >RESET</button>
+
+                </form>
+                <div class="result" id="res_task5">
+
+                </div>
+            </div>
+            <div class="task task6">
+                <h2>Task 8</h2>
+                <div class="desc">
+                    <p>
+                        Удалить  из строки А все символы, которые содержатся в строке Б. <br>
+                        <code>
+                            var str1 = "[A-Z]{}()\\/+*?^.,;:!abcde абвгд 12345"; <br>
+                            var str2 = "[A-Za]{}(aaa)\\/+*?^....,;:!"; <br>
+
+                        </code>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task6_1">Ваша строка: </label>
+                    <input type="text" id="inp_task6_1" class="input">
+                    <label for="inp_task6_2">Символы, которые удалить: </label>
+                    <input type="text" id="inp_task6_2" class="input">
+                    <button type="submit" id="btn_task6" >GO</button>
+                    <button type="reset" id="btn_reset_task6" >RESET</button>
+                </form>
+                <div class="result" id="res_task6">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--<script src="../js/count.bill.js"></script>-->
+    <!--<script src="../js/check.license.js"></script>-->
+    <!--<script src="../js/jquery.maskedinput.min.js"></script>-->
+    <!--<script>-->
+        <!--$(function(){-->
+            <!--$("#customer_tel").mask("(999)999-99-99", {placeholder: " "});-->
+        <!--});-->
+    <!--</script>-->
+</body>
+</html>

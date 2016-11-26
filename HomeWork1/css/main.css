@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f7f9fc;
+}
+
+table {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+    td, th {
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
+        padding: 10px;
+    }
+    table tr:last-of-type td:first-child {
+        padding-left: 20px;
+        text-align: left;
+        font-size: 1.1em;
+    }
+
+.form_capture {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2em;
+}
+a.main_link {
+    text-decoration: none;
+    color: #000;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+    fieldset legend {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    fieldset:after {
+        display: block;
+        clear: both;
+        height: 2px;
+        content: '';
+        background-color: rgba(238, 238, 238, 0.7);
+        margin: 30px;
+    }
+
+input, select, button {
+    padding: 5px 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: #eee url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;
+    width: 25px;
+    height: 34px;
+    margin-right: -10px;
+}
+
+.page_wrapper {
+    background-color: #fff;
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.header {
+    max-width: 950px;
+    margin: 30px auto;
+}
+    .header p {
+        margin-top: -20px;
+        font-size: 1.5em;
+    }
+
+.product_img_min {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+    .product_img_min img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.field {
+    clear: both;
+    margin: 10px auto;
+    /*line-height: 30px;*/
+}
+
+.customer_data label {
+    display: inline-block;
+    width: 150px;
+}
+
+select {
+    width: 200px;
+}
+
+
+.input_order:focus,
+.input_email:focus,
+.input_name:focus,
+.input_tel:focus {
+    background-color: #d7ffec;
+}
+    .input_email:focus:invalid,
+    .input_name:focus:invalid,
+    .input_tel:focus:invalid {
+        outline: none;
+        /*border: 2px transparent;*/
+        box-shadow: 0 0 5px red;
+    }
+    .input_email:valid,
+    .input_name:valid,
+    .input_tel:valid {
+        outline: none;
+        /*border: 2px transparent;*/
+        box-shadow: 0 0 5px green;
+    }
+.btn_submit {
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient( 90deg, rgb(211, 255, 252) 0%, rgb(216, 253, 255) 66%, rgb(235, 255, 252) 100%);
+    text-align: center;
+    font-weight: bold;
+    /*transition: all 0.3s ease-in-out;*/
+}
+    .btn_submit:hover {
+        /*transform: translate(-1px, -1px);*/
+        color: darkred;
+        /*box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.2);*/
+    }
+    .btn_submit:disabled {
+        background: linear-gradient( 90deg, rgb(244, 253, 255) 0%, rgb(244, 255, 248) 66%, rgb(243, 255, 255) 100%);
+    }
+    .btn_submit:disabled:hover {
+        color: #aeaeae;
+    }
+
+.privacy_policy {
+    padding: 10px 20px;
+    font-size: 12px;
+    text-align: center;
+    color: darkgrey;
+    background-color: #a9ccc4;
+}
+
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}

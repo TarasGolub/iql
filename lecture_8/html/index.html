@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 8 | Student 3</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="index.html" class="main_link">Regular Expressions in javascript</a></h1>
+        <p>Lecture 8</p>
+    </header>
+    <main>
+        <div class="page_wrap">
+            <div class="task task1">
+                <div class="desc">
+                    <p>
+                        task 1 <br>
+                        Дана строка, содержащая номер кредитной карточки.
+                        Длина строки может быть произвольной, но больше 8 символов.
+                        Нужно оставить первые 3 и последние 4 символа, а остальные заменить звездочками.
+                        Результирующая строка должна быть той же длины, что и исходная.
+                        Например, <code>"DE56986623670976937041"</code>
+                        должно превратиться в <code>"DE5***************7041"</code>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task1_1">a: </label>
+                    <input type="text" id="inp_task1_1">
+                    <label for="inp_task1_2">b: </label>
+                    <input type="text" id="inp_task1_2">
+                    <button type="submit" id="btn_task1" >GO!</button>
+                    <button type="reset" id="btn_reset_task1" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task1">
+
+                </div>
+            </div>
+            <div class="task task2">
+                <div class="desc">
+                    <p>
+                        task 2 <br>
+                        /**<br>
+                        * Функция на вход получает сумму кредитаб годовую процентную ставку и количество лет.<br>
+                        * Необходимо посчитать и вернуть сумму переплат.<br>
+                        */<br>
+                        <br>
+                        /**<br>
+                        * За основу расчетов берем  классическую банковскую формулу расчета ежемесячного платежа по кредиту<br>
+                        * при аннуитетной схеме:<br>
+                        * К = i / [1 - (1+i)^-n] - рассчет коэфицента ежемесячного платежа<br>
+                        */<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task2_1">Сумма: </label>
+                    <input type="text" id="inp_task2_1">
+                    <label for="inp_task2_2">Процент: </label>
+                    <input type="text" id="inp_task2_2">
+                    <label for="inp_task2_3">Лет: </label>
+                    <input type="text" id="inp_task2_3">
+                    <button type="submit" id="btn_task2" >GO!</button>
+                    <button type="reset" id="btn_reset_task2" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task2">
+
+                </div>
+            </div>
+            <div class="task task3">
+                <div class="desc">
+                    <p>
+                        task 3 <br>
+                        /**<br>
+                        * Функция получает на вход два числа и вычитает из большего меньшее.<br>
+                        */<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task3_1">a: </label>
+                    <input type="text" id="inp_task3_1">
+                    <label for="inp_task3_2">b: </label>
+                    <input type="text" id="inp_task3_2">
+                    <button type="submit" id="btn_task3" >GO!</button>
+                    <button type="reset" id="btn_reset_task3" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task3">
+
+                </div>
+            </div>
+            <div class="task task4">
+                <div class="desc">
+                    <p>
+                        task 4 <br>
+                        /**<br>
+                        * Функция получает на вход три числа и возвращает их среднее значение.<br>
+                        */<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task4_1">a: </label>
+                    <input type="text" id="inp_task4_1">
+                    <label for="inp_task4_2">b: </label>
+                    <input type="text" id="inp_task4_2">
+                    <label for="inp_task4_3">c: </label>
+                    <input type="text" id="inp_task4_3">
+                    <button type="submit" id="btn_task4" >GO!</button>
+                    <button type="reset" id="btn_reset_task4" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task4">
+
+                </div>
+            </div>
+            <div class="task task5">
+                <div class="desc">
+                    <p>
+                        task 5 <br>
+                        /**<br>
+                        * Функция получает на вход число и возвращает его квадрат.<br>
+                        * Если передано не число, то она запрашивает правильное значение у пользователя.<br>
+                        */<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task5_1">n: </label>
+                    <input type="text" id="inp_task5_1">
+                    <button type="submit" id="btn_task5" >GO!</button>
+                    <button type="reset" id="btn_reset_task5" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task5">
+
+                </div>
+            </div>
+            <div class="task task6">
+                <div class="desc">
+                    <p>
+                        task 6.1 <br>
+                        /**<br>
+                        * Функция проверяет ИНН<br>
+                        * ссылка на описание алгоритма https://ru.wikipedia.org/wiki/Идентификационный_номер_налогоплательщика<br>
+                        */<br>
+                    </p>
+                </div>
+                <form action="javascript:;">
+                    <label for="inp_task6_1">n: </label>
+                    <input type="text" id="inp_task6_1">
+                    <button type="submit" id="btn_task6" >GO!</button>
+                    <button type="reset" id="btn_reset_task6" >Reset!</button>
+
+                </form>
+                <div class="result" id="res_task6">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="privacy_policy">
+            <p> Privacy Policy: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque hic nesciunt porro praesentium,
+                recusandae suscipit voluptates! A dolor dolore eveniet ex ipsum numquam quae, sunt ullam vero.
+                Doloribus, neque, vero.
+            </p>
+        </div>
+    </footer>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../single_tasks/task_1.js"></script>
+    <!--<script src="../js/count.bill.js"></script>-->
+    <!--<script src="../js/check.license.js"></script>-->
+    <!--<script src="../js/jquery.maskedinput.min.js"></script>-->
+    <!--<script>-->
+        <!--$(function(){-->
+            <!--$("#customer_tel").mask("(999)999-99-99", {placeholder: " "});-->
+        <!--});-->
+    <!--</script>-->
+</body>
+</html>

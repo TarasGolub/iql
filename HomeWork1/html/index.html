@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 1 | Studen 3</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1><a href="index.html" class="main_link">Intoduction HTML/CSS </a></h1>
+        <p>Lecture 3</p>
+    </header>
+    <main class="page_wrapper">
+
+        <form action="confirm.html" method="get">
+            <h2 class="form_capture">Оформлення замовлення</h2>
+            <fieldset name="order_data">
+                <legend>Продукти</legend>
+                <table>
+                    <tr>
+                        <th colspan="2">Продукт</th>
+                        <th>Кількість</th>
+                        <th>Ціна</th>
+                        <th>Вартість</th>
+                    </tr>
+                    <tr>
+                        <td><div class="product_img_min"><img src="../img/pan.png" alt="pan"></div></td>
+                        <td>Пательня</td>
+                        <td><input type="number" name="pan_quantity" class="input_order" min="0" value="1"></td>
+                        <td>250,00 грн</td>
+                        <td class="sum">250,00 грн</td>
+                    </tr>
+                    <tr>
+                        <td><div class="product_img_min"><img src="../img/kettle.png" alt="kettle"></div></td>
+                        <td>Чайник</td>
+                        <td><input type="number" name="kettle_quantity" class="input_order" min="0" value="2"></td>
+                        <td>300,00 грн</td>
+                        <td class="sum">600,00 грн</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><strong>До сплати</strong></td>
+                        <td class="sum_order">850,00 грн</td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset name="customer_data" class="customer_data">
+                <legend>Дані покупця</legend>
+                <div class="field">
+                    <label for="customer_name">Ваше ім'я:</label>
+                    <input type="text" name="customer_name" id="customer_name" class="input_name"
+                           placeholder="Ваше ім'я" required
+                           title="Це поле є обовязковим!" >
+                </div>
+                <div class="field">
+                    <label for="customer_tel">Телефон:</label>
+                    <input type="tel" name="customer_tel" id="customer_tel" class="input_tel"
+                           placeholder="(000)000-00-00" required
+                           pattern="\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                           title="Введіть данні в форматі: (000)000-00-00">
+                </div>
+                <div class="field">
+                    <label for="customer_email">Електронна адреса:</label>
+                    <input type="email" name="customer_email" id="customer_email" class="input_email"
+                           placeholder="Електронна адреса" required
+                           pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                           title="Це поле є обовязковим!">
+                </div>
+            </fieldset>
+
+            <fieldset name="delivery">
+                <legend>Доставка</legend>
+                <div class="field">
+                    <input type="radio" name="delivery_method" id="self_pickup" value="self_pickup">
+                    <label for="self_pickup">Заберу сам - 0 грн</label>
+                </div>
+                <div class="field">
+                    <input type="radio" name="delivery_method" id="nova_poshta" value="nova_poshta" checked>
+                    <label for="nova_poshta">Нова пошта - 35 грн</label>
+                </div>
+                <div class="field">
+                    <select size="1" name="delivery_city" id="delivery_city">
+                        <option value="vinnitsa">Вінниця</option>
+                        <option value="kiev">Київ</option>
+                        <option value="uzhgorod">Ужгород</option>
+                        <option value="chernigov" selected>Чернігів</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select size="1" name="delivery_storage" id="delivery_storage">
+                        <option value="storage1" selected>Відділення №1</option>
+                        <option value="storage2">Відділення №2</option>
+                        <option value="storage3">Відділення №3</option>
+                        <option value="storage4">Відділення №4</option>
+                        <option value="storage5">Відділення №5</option>
+                        <option value="storage6">Відділення №6</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <input type="checkbox" name="license" id="license" required>
+                <label for="license">Я приймаю ліцензійні угоди</label>
+            </div>
+
+            <button type="submit" class="btn_submit" title="Ознайомтесь з ліцензійною угодою!" disabled>Оформити</button>
+        </form>
+    </main>
+    <footer>
+        <div class="privacy_policy">
+            <p> Privacy Policy: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque hic nesciunt porro praesentium,
+                recusandae suscipit voluptates! A dolor dolore eveniet ex ipsum numquam quae, sunt ullam vero.
+                Doloribus, neque, vero.
+            </p>
+        </div>
+    </footer>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/check.delivery.js"></script>
+    <script src="../js/count.bill.js"></script>
+    <script src="../js/check.license.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
+    <script>
+        $(function(){
+            $("#customer_tel").mask("(999)999-99-99", {placeholder: " "});
+        });
+    </script>
+</body>
+</html>

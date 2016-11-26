@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page_wrap">
+    <h1><a href="#">Парковка</a></h1>
+    <form action="" id="addCarForm" method="post">
+        <div class="input_field">
+            <label for="number">Номер: </label>
+            <input id="number" type="text">
+        </div>
+        <div class="input_field">
+            <label for="brand">Марка: </label>
+            <input id="brand" type="text">
+        </div>
+        <div class="input_field">
+            <label for="owner">Владелец: </label>
+            <input id="owner" type="text">
+        </div>
+        <div class="input_field">
+            <label for="phone">Телефон: </label>
+            <input id="phone" type="text">
+        </div>
+        <button id="add_car" type="submit">Добавить</button>
+    </form>
+    <div class="remove_block">
+        <button id="rm_car" type="button">Удалить</button>
+        <input type="checkbox" name="deleteAllCars" id="deleteAllCars" class="deleteAllCars">
+        <label for="deleteAllCars">Выбрать все </label>
+    </div>
+    <div id="parkingApp">
+        <table id="parking_table">
+            <tr>
+                <th class="number">Номер</th>
+                <th class="brand">Марка</th>
+                <th class="owner">Владелец</th>
+                <th class="phone">Телефон</th>
+                <th class="arrival">Заезд</th>
+                <th class="exit">Выезд</th>
+                <th class="thForBtn"></th>
+            </tr>
+        </table>
+    </div>
+</div>
+    <script src="js/libs/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

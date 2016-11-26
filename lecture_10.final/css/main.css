@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: rgb(254,255,255);
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%);
+}
+.wrap {
+    height: 100%;
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 15px;
+    box-shadow: 0 0 15px 0 rgba(2,10,59,1);
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%, rgb(234, 249, 240) 35%, rgb(232, 239, 237) 100%);
+}
+.wrap div {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+}
+button{
+    padding: 5px 10px;
+    min-width: 100px;
+    border-radius: 4px;
+    font-weight:bold;
+    color:#E5FFFF;
+    background: #3BA4C7;
+    background: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);
+    box-shadow: 0 0 2px 0 rgba(2,10,59,1);
+}
+select {
+    min-width: 100px;
+    padding: 5px 10px;
+}
+input {
+    display: block;
+    margin: 10px;
+    padding: 5px 10px;
+}
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.small {
+    font-size: 12px;
+}
+.comm {
+    color: #767676
+}
+.ex {
+    font-weight: bold;
+    background-color: #ccc;
+    color: #4d0000;
+    padding: 5px;
+}

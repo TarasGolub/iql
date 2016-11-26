@@ -1,0 +1,25 @@
+header,
+main {
+    max-width: 950px;
+    margin: auto;
+}
+.task, .header {
+    margin: 20px;
+    padding: 20px;
+
+}
+.task {
+    box-shadow: 0 0 3px 0px black;
+}
+.desc {
+    color: #464646;
+}
+
+.result {
+    font-size: 1.2em;
+    color: #490000;
+    margin: 10px 0 ;
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+}

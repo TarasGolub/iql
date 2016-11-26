@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Task №4 | Student_3</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <div class="page_wrap">
+        <div class="task task1">
+            <div class="desc">
+                <p>
+                    task 1 <br>
+                    /* <br>
+                    * Создайте ф-ию которая получает на вход обьект или массив и возвращает сообщение с количеством<br>
+                    * строковых/числовых/булевых/других значений в свойствах<br>
+                    */
+                </p>
+            </div>
+            <form action="javascript:;">
+                <label for="inp_task1_1">
+                    <strong>Пожалуйста, введите данные!</strong> <br> Все ключи должны быть обрамленны в кавычки.
+                    пример: <br>
+                    <code>{"a":"1", "b":"2", "c":3, "d":null, "f":{}, "h":[], "k":"u"}</code><br>
+                    <code>["str", 1, 0, "", {"a":2}, null, [1,2,3]]</code><br><br>
+
+                </label>
+                <textarea id="inp_task1_1"></textarea>
+                <button type="submit" id="btn_task1" >GO!</button>
+                <button type="reset" id="btn_reset_task1" >Reset!</button>
+
+            </form>
+            <div class="result" id="res_task1">
+
+            </div>
+        </div>
+        <div class="task task2">
+            <div class="desc">
+                <p>
+                    task 2 <br>
+                    /**<br>
+                    * Функция получает на вход функции(любое количество) и выполняет их пока возвращаемое <br>
+                    * значение выполняемых функций истинно. Результат выполнения массив возвращаемых <br>
+                    * функциями значений.<br>
+                    */
+                </p>
+            </div>
+            <form action="javascript:;">
+                <label for="inp_task2_1">
+                    <strong>Пожалуйста, введите функции разделяя их запятой ","!</strong> <br>
+                    пример: <br>
+                    <code>function () {return 'hello';}, <br>
+                        function () {return Math.random().toFixed(2);}, <br>
+                        function () {var str = "Все идет по плану!"; return str;}, <br>
+                        function () {return 0;}, <br>
+                        function () {return 2+5;}
+                    </code><br>
+
+                </label>
+                <textarea id="inp_task2_1"></textarea>
+                <button type="submit" id="btn_task2" >GO!</button>
+                <button type="reset" id="btn_reset_task2" >Reset!</button>
+
+            </form>
+            <div class="result" id="res_task2">
+
+            </div>
+        </div>
+        <div class="task task3" id="closure_task">
+            <div class="desc">
+                <p>
+                    task 3 <br>
+                    /**<br>
+                    * Это калькулятор обменного пункта, вводите курс и конвертируете.
+                    */
+                </p>
+            </div>
+            <form action="javascript:;">
+                <div>
+                    <label for="rate">Введите текущий курс:</label>
+                    <input type="text" id="rate">
+                    <input type="button" id="btn_task3_set_rate" value="Подтвердить">
+                </div>
+                <div>
+                    <label for="inp_amount">Веедите сумму:</label>
+                    <input id="inp_amount">
+                    <input type="submit" id="btn_task3" value="GO!">
+                    <input type="reset" id="btn_reset_task3" value="Reset" >
+                </div>
+
+            </form>
+            <div class="result" id="res_task3">
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

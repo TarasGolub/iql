@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work 10 | Student 3</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1><a href="index.html">Home Work #10</a></h1>
+    </div>
+    <div class="wrap">
+        <h2>Task 3</h2>
+        <p>
+            <code>$('selector').syncSelect(options); // пример:
+                <span class="ex" onclick="$('.myfancy').syncSelect();">$('.myfancy').syncSelect();</span>
+            </code>
+            <code class="small">
+                <br>
+                options = {<br>
+                <span class="comm">
+                    // Стили рамки выбранного контейнера <br>
+                </span>
+                contBorderWidth: '1px',<br>
+                contBorderStyle: 'dotted',<br>
+                contBorderColor: '#FFB797',<br>
+                <span class="comm">
+                    // Стили рамки и фонового цвета блока SELECT<br>
+                </span>
+                selBorderWidth: '1px',<br>
+                selBorderStyle: 'solid',<br>
+                selBorderColor: 'darkblue',<br>
+                selBackgroundColor: '#C6FFE7',<br>
+                <span class="comm">
+                    // Стили рамки и фонового цвета UL<br>
+                </span>
+                ulBorderWidth: '1px',<br>
+                ulBorderStyle: 'solid',<br>
+                ulBorderColor: 'darkred',<br>
+                ulBackgroundColor: '#FDFFD4'<br>
+                };<br>
+            </code>
+        </p>
+
+        <div class="myfancy myfancy1 myfancy-select-wrapper">
+            <select name="myname">
+                <option value="val1">name1</option>
+                <option value="val2">name2</option>
+            </select>
+            <ul data-input-name="myname">
+                <li data-input-value="val1" class="disabled">name1</li>
+                <li data-input-value="val2" class="enabled selected">name2</li>
+            </ul>
+        </div>
+
+        <div class="myfancy myfancy2 myfancy-select-wrapper">
+            <select name="myname2">
+                <option value="val1">name1</option>
+                <option value="val2">name2</option>
+                <option value="val3">name3</option>
+                <option value="val4">name4</option>
+                <option value="val5">name5</option>
+            </select>
+            <ul data-input-name="myname2">
+                <li data-input-value="val1" class="disabled">name1</li>
+                <li data-input-value="val2" class="enabled ">name2</li>
+                <li data-input-value="val3" >name3</li>
+                <li data-input-value="val4" class="enabled selected">name4</li>
+                <li data-input-value="val5" class="enabled selected">name5</li>
+            </ul>
+            <ul data-input-name="noname">
+                <li data-input-value="val1" class="disabled">name1</li>
+                <li data-input-value="val2" class="enabled selected">name2</li>
+                <li data-input-value="val3" >name3</li>
+                <li data-input-value="val4" class="enabled selected">name4</li>
+                <li data-input-value="val5" class="enabled selected">name5</li>
+            </ul>
+        </div>
+
+        <div class="myfancy myfancy3 myfancy-select-wrapper">
+            <select name="myname3">
+                <option value="val1">name1</option>
+                <option value="val2">name2</option>
+            </select>
+        </div>
+
+        <div class="myfancy myfancy4 myfancy-select-wrapper">
+            <ul data-input-name="myname4">
+                <li data-input-value="val1" class="disabled">name1</li>
+                <li data-input-value="val2" class="enabled selected">name2</li>
+            </ul>
+        </div>
+
+        <div class="myfancy myfancy5 myfancy-select-wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sunt.</p>
+        </div>
+    </div>
+    <div class="wrap">
+        <h2>Task 5</h2>
+        <p>
+            <code>
+                $('selector').fancyCheckbox(options); // пример:
+                <span class="ex" onclick="$('.myFieldset1').fancyCheckbox();">$('.myFieldset1').fancyCheckbox();</span>
+            </code>
+            <code class="small">
+                <br>
+                options = {<br>
+                <span class="comm">
+                    // Стили рамки и фона новосозданного контейнера <br>
+                </span>
+                wrapBackgroundColor: '#FFFCE5',<br>
+                wrapBorder: '1px solid #FFF1C2'<br>
+                };<br>
+            </code>
+
+        </p>
+        <form action="" class="myForm">
+            <fieldset class="myFieldset myFieldset1">
+                <input type="text" name="text1" placeholder="type='text'">
+                <input type="checkbox" name="cb1" value="1" disabled>
+                <input type="checkbox" name="cb2" value="2" checked>
+                <input type="checkbox" name="cb3" value="3" checked disabled>
+                <input type="checkbox" name="cb4" value="4" >
+            </fieldset>
+
+            <fieldset class="myFieldset myFieldset2">
+                <input type="datetime" name="data1" checked>
+                <input type="password" name="pass1" disabled>
+                <input type="checkbox" name="cb5" checked>
+            </fieldset>
+
+            <input type="checkbox" name="cb6" checked>
+
+        </form>
+
+        <div class="myDiv">
+            <input type="checkbox" name="cb7">
+        </div>
+
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.syncSelect.js"></script>
+    <script src="js/jquery.fancyCheckbox.js"></script>
+    <script>
+        (function () {
+            var i = 0, j = 0;
+            $(document).on('syncSelect.sync', function (e) {
+                console.log('sync ' + ++i + '\n' + e.target.tagName + ' class=\"' + e.target.classList + '\"');
+            });
+            $(document).on('fancyCheckbox.wrap', function (e) {
+                console.log("Wrapped: " + ++j);
+            });
+        })();
+    </script>
+</body>
+</html>

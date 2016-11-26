@@ -1,0 +1,21 @@
+.page_wrap {
+    max-width: 950px;
+    margin: auto;
+}
+.task {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.desc {
+    color: #464646;
+}
+
+.result {
+    font-size: 1.2em;
+    color: #490000;
+    margin: 10px 0 ;
+    padding: 10px;
+    border: 1px solid black;
+    height: 50px;
+}

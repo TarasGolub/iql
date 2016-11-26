@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .code {
+            border: 1px solid black;
+            margin: 0 0 50px 0;
+            padding: 10px;
+            background: #ebebeb;
+        }
+        .comm {
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>
+        Создать товар:
+    </p>
+    <div class="code">
+        <code>
+            var productDecription = { <br>&ensp;
+            id: 1011, <br>&ensp;
+            name: "Product`s Name", <br>&ensp;
+            price: 199, <br>&ensp;
+            shortdesc: "Here is short description", <br>&ensp;
+            fullDesc: "Here is long full description Lorem ipsum dolor sit amet," +<br>&ensp;
+            &ensp;  "consectetur adipisicing elit. Consequatur corporis facere, fuga " +<br>&ensp;
+            &ensp; "mollitia neque nisi pariatur quaerat rerum sunt voluptates.", <br>&ensp;
+            stock: 12 <br>
+            }; <br><br>
+            var product1 = new Product(productDecription); <br>
+        </code>
+        <code class="comm">
+            <br>
+            // Если Вы не передадите объект с описанием свойств продукта <br>
+            // или определите не все свойства будут назначены по умолчанию <br>
+            // Обязательным свойством является цена (price) <br>
+            // Отключить можно не передавая второй параметр в функцию <br>
+            // установки цены в конструкторе продукта (стр. 43)<br>
+            // this.price = setValue(prod.price, <strong>true</strong>);  <br> // ==> <br>
+            // this.price = setValue(prod.price);<br><br>
+        </code>
+        <code class="comm">
+            // Вывести список всех созданных товаров:
+            <strong><a href="javascript:console.log(Product.showProducts())">Product.productList</a></strong><br><br>
+        </code>
+        <code class="comm">
+            // shows id, name and quantity of each product <br>
+            // @returns {string} <br>
+        </code>
+        <code>
+            Product.showProducts()
+        </code>
+    </div>
+</div>
+
+<div>
+    <p>
+        Создать заказ:
+    </p>
+    <div class="code">
+        <code>
+            var orderDetails = { <br>&ensp;
+            addr: '5322 Otter Lane Middleberge FL 32068 ', <br>&ensp;
+            delType: 'DHL', <br>&ensp;
+            delCost: 35, <br>&ensp;
+            payMethod: 'paypal' <br>
+            }; <br><br>
+
+            var order1 = new Order(orderDetails)<br><br>
+        </code>
+        <code class="comm">
+            // Если не передать параметр с описанием свойств заказа,<br>
+            // свойства будут назначены по умолчанию.<br>
+            // Свойства можно изменить методом setOrderInfo()<br>
+        </code>
+        <code>
+            order1.setOrderInfo({"payMethod":"Yandex Money"});<br>
+        </code>
+    </div>
+</div>
+
+<div>
+    <p>Добавление и удаление товаров в заказ:</p>
+    <div class="code">
+        <code class="comm">
+        // Добавить товар в заказ<br>
+        </code>
+        <code>
+            order1.addItem(product1)<br>
+            order1.addItem(product1)<br><br>
+        </code>
+        <code class="comm">
+            // Удалить товар из заказа<br>
+        </code>
+        <code>
+            order1.removeItem(product1)<br><br>
+        </code>
+        <code class="comm">
+            // Показать все товары в заказе<br>
+        </code>
+        <code>
+            order1.showCart()<br><br>
+        </code>
+        <code class="comm">
+            // Показать суммарную стоимость всех товаров в заказе<br>
+            // С учетом скидки если передать в качестве аргумента объект вида<br>
+        </code>
+        <code>
+            var discount = { abs: "20 usd", pct: "10%"}; <br>
+        </code>
+        <code>
+            order1.getPrice(discount)<br><br>
+        </code>
+        <code class="comm">
+            // Удалить все товары в заказе<br>
+        </code>
+        <code>
+            order1.cleanCart()<br><br>
+        </code>
+    </div>
+</div>
+
+<div>
+    <p>
+        Подтверждение заказа:
+    </p>
+    <div class="code">
+        <code class="comm">
+            // Подтвердить заказ<br>
+            // Если передан объект скидки, будет выведена информация по скидке <br>
+            // и общая стоимость заказа с вычетом скидки<br><br>
+
+            // Уменьшается количество товара в его свойствах<br>
+            // Если количество заказанного товара превышает его количество на складе <br>
+            // в заказ будет внесено максимально возможное количество. Будет выведено сообщение <br><br>
+            // Заказу назначается порядковый номер и заказ сохраняется<br>
+            // Товары из заказа удаляются<br><br>
+            // Заказ считается завершенным<br>
+        </code>
+        <code>
+            order1.confirmOrder(discount);<br><br>
+        </code>
+        <code class="comm">
+            // Посмотреть список всех заказов: <br>
+            // <strong><a href="javascript:console.log(Order.showOrders())">Order.orderList</a></strong><br><br>
+        </code>
+        <code>
+            Order.showOrders(); <br>
+        </code>
+
+    </div>
+</div>
+
+<script src="home_task_7.1.js"></script>
+</body>
+</html>
